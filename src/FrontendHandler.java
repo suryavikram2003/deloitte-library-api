@@ -12,7 +12,8 @@ public class FrontendHandler implements HttpHandler {
         int status = 200;
 
         try {
-            java.io.File file = new java.io.File("web/index.html");
+            String basePath = System.getProperty("user.dir");
+            java.io.File file = new java.io.File(basePath + "/web/index.html");
             if (file.exists()) {
                 bytes = Files.readAllBytes(file.toPath());
             } else {
