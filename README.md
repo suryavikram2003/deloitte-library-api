@@ -1,14 +1,14 @@
 # Deloitte Graduate Hiring Assessment
 
 **Full Name:** Suryavikram K
-**Email ID:** your-email@gmail.com
+**Email ID:** suryavikramkrishnan@gmail.com
 **College Name:** Sona College of Technology
 **Selected Skill Track:** Java & API Development
 
 ---
 
 ## Project Title
-Library Management System – Enhanced REST API (Java) v2.0
+Library Management System – Enhanced REST API (Java)
 
 ## Description
 A production-quality REST API built using core Java (`com.sun.net.httpserver`) with 8 professional enhancements: input validation, search & filter, pagination, borrow history tracking, health check endpoint, statistics, structured logging, and standardised JSON wrapper responses.
