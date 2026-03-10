@@ -7,6 +7,22 @@
 
 ---
 
+## 🌐 Live Demo
+
+> **Deployed on Railway** — click the links below to access the live application:
+
+| Endpoint | Link |
+|----------|------|
+| 🖥️ Frontend UI | [View App](https://deloitte-library-api.up.railway.app/) |
+| 📚 Books API | [GET /books](https://deloitte-library-api.up.railway.app/books) |
+| 💚 Health Check | [GET /health](https://deloitte-library-api.up.railway.app/health) |
+| 📊 Statistics | [GET /books/stats](https://deloitte-library-api.up.railway.app/books/stats) |
+| 🕑 Borrow History | [GET /books/history](https://deloitte-library-api.up.railway.app/books/history) |
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template)
+
+---
+
 ## Project Title
 Library Management System – Enhanced REST API (Java)
 
@@ -45,8 +61,13 @@ deloitte-library-api/
 │   ├── BookRepository.java # Data layer (CRUD + search + stats)
 │   ├── BookHandler.java    # HTTP request handler
 │   ├── HealthHandler.java  # Health check endpoint
+│   ├── FrontendHandler.java# Frontend HTML file server
 │   ├── JsonUtil.java       # JSON serialization helpers
 │   └── Logger.java         # Structured logging utility
+├── web/
+│   └── index.html          # Frontend UI (dark-themed dashboard)
+├── Dockerfile              # Docker build for Railway deployment
+├── run.sh                  # Local build & run script
 └── README.md
 ```
 
@@ -121,6 +142,23 @@ deloitte-library-api/
 ```json
 {"status":"success","message":"Book checked out successfully by Suryavikram"}
 ```
+
+## Deployment
+
+### Railway (Live)
+This project is deployed on [Railway](https://railway.app) using Docker.
+
+- **Live URL:** https://deloitte-library-api.up.railway.app/
+- Auto-deploys on every push to `main`
+- Uses `Dockerfile` for containerised deployment
+- `PORT` environment variable is injected by Railway automatically
+
+### Run Locally
+```bash
+chmod +x run.sh
+./run.sh
+```
+Then open http://localhost:8080 in your browser.
 
 ## How to Run on Replit
 1. Go to https://replit.com and create a **Java** Repl
