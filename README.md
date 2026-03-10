@@ -1,7 +1,7 @@
 # Deloitte Graduate Hiring Assessment
 
 **Full Name:** Suryavikram K
-**Email ID:** suryavikramkrishnan@gmail.com
+**Email ID:** suryavikramkrishnanr@gmail.com
 **College Name:** Sona College of Technology
 **Selected Skill Track:** Java & API Development
 
