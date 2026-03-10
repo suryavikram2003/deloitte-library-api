@@ -10,3 +10,4 @@ COPY web/ ./web/
 ENV PORT=8080
 EXPOSE $PORT
 CMD java -cp out Main
+

@@ -143,6 +143,23 @@ deloitte-library-api/
 {"status":"success","message":"Book checked out successfully by Suryavikram"}
 ```
 
+## Deployment
+
+### Railway (Live)
+This project is deployed on [Railway](https://railway.app) using Docker.
+
+- **Live URL:** https://deloitte-library-api.up.railway.app/
+- Auto-deploys on every push to `main`
+- Uses `Dockerfile` for containerised deployment
+- `PORT` environment variable is injected by Railway automatically
+
+### Run Locally
+```bash
+chmod +x run.sh
+./run.sh
+```
+Then open http://localhost:8080 in your browser.
+
 ## How to Run on Replit
 1. Go to https://replit.com and create a **Java** Repl
 2. Create a `src/` folder and add all `.java` files
