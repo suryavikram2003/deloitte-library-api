@@ -1,10 +1,3 @@
-FROM eclipse-temurin:17-jdk-alpine AS build
-WORKDIR /app
-COPY src/ ./src/
-RUN mkdir -p out && javac -d out src/*.java
-
-FROM eclipse-temurin:17-jre-alpine
-WORKDIR /app
-COPY --from=build /app/out ./out
-EXPOSE 8080
-CMD ["java", "-cp", "out", "Main"]
+# This Dockerfile is not used for Replit deployment.
+# The app runs via run.sh using the Replit Nix environment.
+# To run locally: bash run.sh

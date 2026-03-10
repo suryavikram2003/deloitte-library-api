@@ -19,4 +19,5 @@ mkdir -p out
 javac -d out src/*.java
 
 echo "Compilation successful. Starting server..."
+export PORT=${PORT:-8080}
 java -cp out Main
