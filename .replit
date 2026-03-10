@@ -4,9 +4,7 @@ entrypoint = "src/Main.java"
 
 [nix]
 channel = "stable-23_11"
-
-[nix.packages]
-jdk = "jdk"
+packages = ["jdk"]
 
 [[ports]]
 localPort = 8080
