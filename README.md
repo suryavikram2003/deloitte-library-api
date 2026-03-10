@@ -178,3 +178,20 @@ Then open http://localhost:8080 in your browser.
 [2026-03-09 10:15:50] GET /books/99 -> 404 Not Found
 [2026-03-09 10:16:00] GET /health -> 200 OK
 ```
+
+## Deployment
+
+### Railway (Live)
+This project is deployed on [Railway](https://railway.app) using Docker.
+
+- **Live URL:** https://deloitte-library-api.up.railway.app/
+- Auto-deploys on every push to `main`
+- Uses `Dockerfile` for containerised deployment
+- `PORT` environment variable is injected by Railway automatically
+
+### Run Locally
+```bash
+chmod +x run.sh
+./run.sh
+```
+Then open http://localhost:8080 in your browser.
