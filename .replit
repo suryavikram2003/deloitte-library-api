@@ -14,4 +14,4 @@ externalPort = 80
 
 [deployment]
 run = ["sh", "-c", "bash run.sh"]
-deploymentTarget = "cloudrun"
+deploymentTarget = "autoscale"

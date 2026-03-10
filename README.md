@@ -9,17 +9,15 @@
 
 ## 🌐 Live Demo
 
-> **Deployed on Railway** — click the links below to access the live application:
+> **Deployed on Replit** — click the links below to access the live application once deployed:
 
-| Endpoint | Link |
-|----------|------|
-| 🖥️ Frontend UI | [View App](https://deloitte-library-api.up.railway.app/) |
-| 📚 Books API | [GET /books](https://deloitte-library-api.up.railway.app/books) |
-| 💚 Health Check | [GET /health](https://deloitte-library-api.up.railway.app/health) |
-| 📊 Statistics | [GET /books/stats](https://deloitte-library-api.up.railway.app/books/stats) |
-| 🕑 Borrow History | [GET /books/history](https://deloitte-library-api.up.railway.app/books/history) |
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template)
+| Endpoint | Description |
+|----------|-------------|
+| 🖥️ Frontend UI | `/` — Full Library Management UI |
+| 📚 Books API | `/books` — CRUD operations |
+| 💚 Health Check | `/health` — Service status |
+| 📊 Statistics | `/books/stats` — Library stats |
+| 🕑 Borrow History | `/books/history` — Full history |
 
 ---
 
@@ -66,7 +64,7 @@ deloitte-library-api/
 │   └── Logger.java         # Structured logging utility
 ├── web/
 │   └── index.html          # Frontend UI (dark-themed dashboard)
-├── Dockerfile              # Docker build for Railway deployment
+├── Dockerfile              # Not used for Replit (kept for reference)
 ├── run.sh                  # Local build & run script
 └── README.md
 ```
@@ -145,13 +143,16 @@ deloitte-library-api/
 
 ## Deployment
 
-### Railway (Live)
-This project is deployed on [Railway](https://railway.app) using Docker.
+### Replit (Recommended)
+This project is configured for [Replit](https://replit.com) deployment.
 
-- **Live URL:** https://deloitte-library-api.up.railway.app/
-- Auto-deploys on every push to `main`
-- Uses `Dockerfile` for containerised deployment
-- `PORT` environment variable is injected by Railway automatically
+1. Fork or import this repository into Replit
+2. Replit auto-detects Java and uses `.replit` to run `bash run.sh`
+3. Click **Run** — the server compiles and starts on port 8080
+4. The Replit webview opens the full Library Management UI automatically
+5. For production: click **Deploy → Autoscale** to get a permanent public URL
+
+The server listens on `0.0.0.0:8080` as required by Replit.
 
 ### Run Locally
 ```bash
@@ -161,11 +162,11 @@ chmod +x run.sh
 Then open http://localhost:8080 in your browser.
 
 ## How to Run on Replit
-1. Go to https://replit.com and create a **Java** Repl
-2. Create a `src/` folder and add all `.java` files
-3. Click **Run**
-4. Server starts on port **8080**
-5. Use the Replit webview URL to test endpoints
+1. Go to https://replit.com and import this repository
+2. Click **Run** — the `.replit` config runs `bash run.sh` automatically
+3. Server starts on port **8080** and binds to `0.0.0.0`
+4. Use the Replit webview URL to access the full UI and test all endpoints
+5. To deploy publicly: click **Deploy → Autoscale**
 
 ## Console Log Sample
 ```
@@ -178,20 +179,3 @@ Then open http://localhost:8080 in your browser.
 [2026-03-09 10:15:50] GET /books/99 -> 404 Not Found
 [2026-03-09 10:16:00] GET /health -> 200 OK
 ```
-
-## Deployment
-
-### Railway (Live)
-This project is deployed on [Railway](https://railway.app) using Docker.
-
-- **Live URL:** https://deloitte-library-api.up.railway.app/
-- Auto-deploys on every push to `main`
-- Uses `Dockerfile` for containerised deployment
-- `PORT` environment variable is injected by Railway automatically
-
-### Run Locally
-```bash
-chmod +x run.sh
-./run.sh
-```
-Then open http://localhost:8080 in your browser.

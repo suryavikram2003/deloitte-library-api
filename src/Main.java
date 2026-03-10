@@ -7,7 +7,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         int port = Integer.parseInt(System.getenv().getOrDefault("PORT", "8080"));
         BookRepository repo = new BookRepository();
-        HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
+        // Bind to 0.0.0.0 so Replit can proxy to the server
+        HttpServer server = HttpServer.create(new InetSocketAddress("0.0.0.0", port), 0);
 
         // Register specific routes BEFORE the catch-all root route
         server.createContext("/books", new BookHandler(repo));
