@@ -7,5 +7,6 @@ FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 COPY --from=build /app/out ./out
 COPY web/ ./web/
-EXPOSE 8080
-CMD ["java", "-cp", "out", "Main"]
+ENV PORT=8080
+EXPOSE $PORT
+CMD java -cp out Main
