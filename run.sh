@@ -19,5 +19,4 @@ mkdir -p out
 javac -d out src/*.java
 
 echo "Compilation successful. Starting server..."
-cd out
-java -cp . Main
+java -cp out Main
