@@ -8,4 +8,4 @@ WORKDIR /app
 COPY --from=build /app/out ./out
 COPY web/ ./web/
 EXPOSE 8080
-CMD ["sh", "-c", "java -cp out Main"]
+CMD ["java", "-cp", "out", "Main"]
